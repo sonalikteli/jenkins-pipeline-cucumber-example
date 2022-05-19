@@ -9,8 +9,9 @@ pipeline{
             steps {
 
                 withMaven(maven: 'maven_3_5_0') {
+                    dir("jenkins-pipeline-cucumber-example") {
                     sh 'mvn clean install'
-
+                    }
                 }
 
             }
